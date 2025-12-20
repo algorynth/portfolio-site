@@ -1,66 +1,145 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.');
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  const features = [
+    { icon: '📱', title: 'Mobil Uygulamalar', desc: 'iOS ve Android için native ve cross-platform mobil uygulama geliştirme.' },
+    { icon: '🌐', title: 'Web Uygulamaları', desc: 'Modern ve responsive web siteleri ve web uygulamaları geliştiriyoruz.' },
+    { icon: '🖥️', title: 'Masaüstü Yazılımlar', desc: 'Windows, macOS ve Linux için masaüstü uygulamalar.' },
+    { icon: '☁️', title: 'Backend & API', desc: 'Güvenli ve ölçeklenebilir backend sistemleri ve API geliştirme.' },
+    { icon: '🔧', title: 'Özel Yazılım', desc: 'İşletmenize özel yazılım çözümleri ve entegrasyonlar.' },
+    { icon: '🤝', title: 'Danışmanlık', desc: 'Yazılım projeleriniz için teknik danışmanlık ve rehberlik.' },
+  ];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="container hero-content">
+          <p className="hero-subtitle fade-in-up">💻 Profesyonel Yazılım Çözümleri</p>
+          <h1 className="fade-in-up delay-1">Fikirlerinizi<br />Yazılıma Dönüştürüyoruz</h1>
+          <p className="hero-description fade-in-up delay-2">
+            GMD Studios olarak, mobil, web ve masaüstü platformlarda ihtiyaçlarınıza özel yazılım çözümleri sunuyoruz. Her ölçekte projeye profesyonel yaklaşım.
           </p>
+          <div className="hero-buttons fade-in-up delay-3">
+            <Link href="/apps" className="btn btn-primary">
+              <span>🚀</span> Projelerimiz
+            </Link>
+            <Link href="/team" className="btn btn-secondary">
+              <span>👥</span> Ekibimizi Tanıyın
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Section */}
+      <section id="features">
+        <div className="container">
+          <div className="section-header">
+            <h2>Hizmetlerimiz</h2>
+            <p>Yazılım ihtiyaçlarınız için kapsamlı çözümler sunuyoruz</p>
+          </div>
+
+          <div className="features-grid">
+            {features.map((feature, index) => (
+              <div className="card feature-card" key={index}>
+                <div className="feature-icon">{feature.icon}</div>
+                <h3 className="feature-title">{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Featured App Section */}
+      <section id="featured-app" style={{ background: 'var(--bg-primary)' }}>
+        <div className="container">
+          <div className="section-header">
+            <h2>Öne Çıkan Proje</h2>
+            <p>Son projelerimizden birini keşfedin</p>
+          </div>
+
+          <div className="card app-card" style={{ maxWidth: '800px', margin: '0 auto', padding: 0 }}>
+            <div className="app-image">💪</div>
+            <div className="app-content">
+              <span className="app-badge">Mobil Uygulama</span>
+              <h3 className="app-title">Gym Tracker</h3>
+              <p className="app-description">
+                Fitness yolculuğunuzu profesyonelce takip edin. Antrenmanlarınızı planlayın, ilerlemenizi izleyin ve hedeflerinize ulaşın.
+              </p>
+              <ul className="app-features">
+                <li>Detaylı antrenman takibi</li>
+                <li>Kalori ve beslenme hesaplayıcı</li>
+                <li>İlerleme grafikleri</li>
+                <li>Hazır antrenman şablonları</li>
+              </ul>
+              <div className="app-links">
+                <Link href="/apps" className="btn btn-primary">Tüm Projeler</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact">
+        <div className="container">
+          <div className="section-header">
+            <h2>İletişime Geçin</h2>
+            <p>Projeniz için teklif alın veya sorularınızı iletin</p>
+          </div>
+
+          <div className="contact-container card">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Adınız</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  placeholder="Adınızı girin"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">E-posta</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  placeholder="E-posta adresinizi girin"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Mesajınız</label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  placeholder="Projenizi veya ihtiyaçlarınızı açıklayın"
+                ></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                Gönder
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
