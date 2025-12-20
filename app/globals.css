@@ -970,3 +970,30 @@ section {
     padding: 3.5rem 0;
   }
 }
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition-bounce);
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-button:active {
+  transform: scale(1.05);
+}

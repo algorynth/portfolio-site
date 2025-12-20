@@ -31,16 +31,15 @@ export default function TeamPage() {
 
                     <div className="team-grid">
                         <div className="card team-card">
-                            <div className="team-avatar">👨‍💻</div>
-                            <h3 className="team-name">Bedir</h3>
-                            <p className="team-role">Kurucu & Lead Developer</p>
+                            <img src="/bedir.jpg" alt="Bedir Tuğra Karaabalı" className="team-avatar" style={{ objectFit: 'cover' }} />
+                            <h3 className="team-name">Bedir Tuğra Karaabalı</h3>
+                            <p className="team-role">Kurucu & Full Stack Yazılım Mühendisi</p>
                             <p className="team-bio">
-                                Yazılım geliştirme konusunda uzman. Mobil, web ve masaüstü platformlarda kullanıcı deneyimini ön planda tutan, yenilikçi çözümler üreten bir yazılım geliştirici.
+                                Bilgisayar Mühendisi. Mobil, web ve masaüstü platformlarda kullanıcı deneyimini ön planda tutan, yenilikçi çözümler üreten bir yazılım geliştirici. Makine öğrenimi, ön uç geliştirme ve web teknolojileri konularında uzman.
                             </p>
                             <div className="team-social">
-                                <a href="#" aria-label="GitHub">🔗</a>
-                                <a href="#" aria-label="LinkedIn">💼</a>
-                                <a href="#" aria-label="Twitter">🐦</a>
+                                <a href="https://github.com/bdrtr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🔗</a>
+                                <a href="https://www.linkedin.com/in/bdrtr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
                             </div>
                         </div>
                     </div>
