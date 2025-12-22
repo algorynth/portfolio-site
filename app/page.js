@@ -69,22 +69,55 @@ export default function Home() {
             <p>Son projelerimizden birini keşfedin</p>
           </div>
 
-          <div className="card app-card" style={{ maxWidth: '800px', margin: '0 auto', padding: 0 }}>
-            <div className="app-image">💪</div>
+          <div className="card app-card" style={{ maxWidth: '900px', margin: '0 auto', padding: 0, overflow: 'hidden' }}>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '0.75rem',
+              padding: '1.5rem',
+              background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)'
+            }}>
+              <img
+                src="/gym_tracker_1.png"
+                alt="Gym Tracker - Antrenman Takibi"
+                style={{ width: '100%', borderRadius: 'var(--radius-sm)', boxShadow: '0 8px 20px rgba(0,0,0,0.25)' }}
+              />
+              <img
+                src="/gym_tracker_2.png"
+                alt="Gym Tracker - İlerleme"
+                style={{ width: '100%', borderRadius: 'var(--radius-sm)', boxShadow: '0 8px 20px rgba(0,0,0,0.25)' }}
+              />
+              <img
+                src="/gym_tracker_3.png"
+                alt="Gym Tracker - Şablonlar"
+                style={{ width: '100%', borderRadius: 'var(--radius-sm)', boxShadow: '0 8px 20px rgba(0,0,0,0.25)' }}
+              />
+            </div>
             <div className="app-content">
-              <span className="app-badge">Mobil Uygulama</span>
-              <h3 className="app-title">Gym Tracker</h3>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                <span className="app-badge" style={{ background: 'var(--success)', color: 'white' }}>✓ Yayında</span>
+                <span className="app-badge">Mobil Uygulama</span>
+              </div>
+              <h3 className="app-title">💪 Gym Tracker</h3>
               <p className="app-description">
                 Fitness yolculuğunuzu profesyonelce takip edin. Antrenmanlarınızı planlayın, ilerlemenizi izleyin ve hedeflerinize ulaşın.
               </p>
               <ul className="app-features">
                 <li>Detaylı antrenman takibi</li>
-                <li>Kalori ve beslenme hesaplayıcı</li>
-                <li>İlerleme grafikleri</li>
+                <li>İlerleme grafikleri ve istatistikler</li>
                 <li>Hazır antrenman şablonları</li>
+                <li>Tamamen ücretsiz</li>
               </ul>
               <div className="app-links">
-                <Link href="/apps" className="btn btn-primary">Tüm Projeler</Link>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.mobileappscoop.gymtracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  <span>▶️</span> Google Play&apos;de İndir
+                </a>
+                <Link href="/apps" className="btn btn-secondary">Tüm Projeler</Link>
               </div>
             </div>
           </div>
