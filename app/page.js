@@ -23,19 +23,48 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container hero-content">
-          <p className="hero-subtitle fade-in-up">💻 Profesyonel Yazılım Çözümleri</p>
-          <h1 className="fade-in-up delay-1">Fikirlerinizi<br />Yazılıma Dönüştürüyoruz</h1>
-          <p className="hero-description fade-in-up delay-2">
-            GMD Studios olarak, mobil, web ve masaüstü platformlarda ihtiyaçlarınıza özel yazılım çözümleri sunuyoruz. Her ölçekte projeye profesyonel yaklaşım.
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50 pt-20">
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-[30%] -right-[10%] w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-3xl animate-float opacity-70"></div>
+          <div className="absolute -bottom-[30%] -left-[10%] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl animate-float-reverse opacity-70"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+          <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-6 tracking-wide border border-blue-100 animate-slideDown shadow-sm">
+            💻 PROFESYONEL YAZILIM ÇÖZÜMLERİ
+          </span>
+
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight text-slate-900 mb-8 tracking-tight animate-slideDown" style={{ animationDelay: '0.1s' }}>
+            Fikirlerinizi <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">
+              Yazılıma Dönüştürüyoruz
+            </span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-slideDown" style={{ animationDelay: '0.2s' }}>
+            GMD Studios olarak, mobil, web ve masaüstü platformlarda modern, ölçeklenebilir ve özel yazılım çözümleri sunuyoruz.
           </p>
-          <div className="hero-buttons fade-in-up delay-3">
-            <Link href="/apps" className="btn btn-primary">
-              <span>🚀</span> Projelerimiz
+
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-slideDown" style={{ animationDelay: '0.3s' }}>
+            <Link
+              href="/apps"
+              className="group relative px-8 py-4 bg-blue-600 !text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300 overflow-hidden flex items-center justify-center min-w-[200px]"
+            >
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+              <span className="relative flex items-center gap-3">
+                <span className="text-2xl">🚀</span>
+                <span>Projelerimiz</span>
+              </span>
             </Link>
-            <Link href="/team" className="btn btn-secondary">
-              <span>👥</span> Ekibimizi Tanıyın
+
+            <Link
+              href="/team"
+              className="group px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-semibold text-lg shadow-sm hover:shadow-md hover:border-blue-500 hover:text-blue-600 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px]"
+            >
+              <span className="text-2xl">👥</span>
+              <span>Ekibimizi Tanıyın</span>
             </Link>
           </div>
         </div>
