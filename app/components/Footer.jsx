@@ -31,7 +31,7 @@ export default function Footer() {
                     <div className="footer-links">
                         <h4>İletişim</h4>
                         <ul>
-                            <li><a href="mailto:contact@gmdstudios.com">contact@gmdstudios.com</a></li>
+                            <li><a href="mailto:contact@algorynth.net">contact@algorynth.net</a></li>
                         </ul>
                     </div>
                 </div>
