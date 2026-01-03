@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2024 algorynth. Tüm hakları saklıdır.</p>
+                    <p>&copy; 2026 algorynth. Tüm hakları saklıdır.</p>
                 </div>
             </div>
         </footer>
