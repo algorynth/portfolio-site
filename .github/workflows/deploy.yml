@@ -31,8 +31,7 @@ jobs:
       - name: Trigger deployment via webhook
         run: |
           curl -X POST https://webhook.algorynth.net/hooks/portfolio-rebuild \
-            -H "Content-Type: application/json" \
-            -d '{}'
+            -H "X-Webhook-Token: ${{ secrets.WEBHOOK_SECRET }}"
 
       - name: Wait for deployment
         run: sleep 10
