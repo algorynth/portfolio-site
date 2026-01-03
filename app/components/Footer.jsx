@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-brand">
-                        <h3>GMD Studios</h3>
+                        <h3>algorynth</h3>
                         <p>Mobil, web ve masaüstü platformlarda profesyonel yazılım çözümleri sunan genç ve dinamik bir ekip.</p>
                     </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2024 GMD Studios. Tüm hakları saklıdır.</p>
+                    <p>&copy; 2024 algorynth. Tüm hakları saklıdır.</p>
                 </div>
             </div>
         </footer>

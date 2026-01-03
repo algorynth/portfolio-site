@@ -17,7 +17,7 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <div className="container nav-content">
-                <Link href="/" className="nav-logo">GMD Studios</Link>
+                <Link href="/" className="nav-logo">algorynth</Link>
                 <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
                     {links.map((link) => (
                         <li key={link.href}>

@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'GMD Studios | Yazılım Çözümleri',
-  description: 'GMD Studios - Mobil, web ve masaüstü platformlarda profesyonel yazılım çözümleri. Her ölçekte projeye özel yaklaşım.',
-  keywords: 'yazılım, mobil uygulama, web geliştirme, masaüstü yazılım, API, GMD Studios',
+  title: 'algorynth | Yazılım Çözümleri',
+  description: 'algorynth - Mobil, web ve masaüstü platformlarda profesyonel yazılım çözümleri. Her ölçekte projeye özel yaklaşım.',
+  keywords: 'yazılım, mobil uygulama, web geliştirme, masaüstü yazılım, API, algorynth',
 };
 
 export default function RootLayout({ children }) {

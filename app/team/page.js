@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Ekibimiz | GMD Studios',
-    description: 'GMD Studios ekibini tanıyın. Yazılım çözümleri sunan tutkulu profesyoneller.',
+    title: 'Ekibimiz | algorynth',
+    description: 'algorynth ekibini tanıyın. Yazılım çözümleri sunan tutkulu profesyoneller.',
 };
 
 export default function TeamPage() {

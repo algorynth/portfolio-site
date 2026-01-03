@@ -44,7 +44,7 @@ export default function Home() {
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-slideDown" style={{ animationDelay: '0.2s' }}>
-            GMD Studios olarak, mobil, web ve masaüstü platformlarda modern, ölçeklenebilir ve özel yazılım çözümleri sunuyoruz.
+            algorynth olarak, mobil, web ve masaüstü platformlarda modern, ölçeklenebilir ve özel yazılım çözümleri sunuyoruz.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-slideDown" style={{ animationDelay: '0.3s' }}>

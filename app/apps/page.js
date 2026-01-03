@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Projeler | GMD Studios',
-    description: 'GMD Studios tarafından geliştirilen yazılım projeleri. Mobil uygulamalar, web projeleri ve daha fazlası.',
+    title: 'Projeler | algorynth',
+    description: 'algorynth tarafından geliştirilen yazılım projeleri. Mobil uygulamalar, web projeleri ve daha fazlası.',
 };
 
 export default function AppsPage() {
