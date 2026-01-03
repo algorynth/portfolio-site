@@ -1,0 +1,44 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Build application
+        run: npm run build
+
+      - name: Trigger deployment via webhook
+        run: |
+          curl -X POST https://webhook.algorynth.net/hooks/portfolio-rebuild \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Wait for deployment
+        run: sleep 10
+
+      - name: Check deployment status
+        run: |
+          echo "Deployment triggered. Checking status..."
+          curl -s https://webhook.algorynth.net/hooks/portfolio-status | jq .
+          curl -s https://webhook.algorynth.net/hooks/portfolio-commit | jq .
