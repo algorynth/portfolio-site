@@ -48,7 +48,7 @@ export default function TeamPage() {
                             <h3 className="team-name">Osman Bayram</h3>
                             <p className="team-role">Data Scientist & ML Specialist</p>
                             <p className="team-bio">
-                                Bahçeşehir Üniversitesi mezunu. N Kolay'da Dijital Ürün Yönetimi ve IT Koordinasyonunda çalışan, makine öğrenimi ve yapay zeka konularında uzman veri bilimci. Kaggle Notebooks Expert. Veri analizi ve modelleme alanında geniş tecrübeye sahip.
+                                Bahçeşehir Üniversitesi mezunu. N Kolay&apos;da Dijital Ürün Yönetimi ve IT Koordinasyonunda çalışan, makine öğrenimi ve yapay zeka konularında uzman veri bilimci. Kaggle Notebooks Expert. Veri analizi ve modelleme alanında geniş tecrübeye sahip.
                             </p>
                             <div className="team-social">
                                 <a href="https://github.com/osbm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🔗</a>
