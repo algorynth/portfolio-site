@@ -3,19 +3,24 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import type { Metadata } from 'next';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'algorynth | Yazılım Çözümleri',
   description: 'algorynth - Mobil, web ve masaüstü platformlarda profesyonel yazılım çözümleri. Her ölçekte projeye özel yaklaşım.',
   keywords: 'yazılım, mobil uygulama, web geliştirme, masaüstü yazılım, API, algorynth',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="tr" className={inter.className}>
       <body>

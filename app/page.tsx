@@ -2,16 +2,28 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function Home() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  const handleSubmit = (e) => {
+interface Feature {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+export default function Home() {
+  const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert('Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.');
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const features = [
+  const features: Feature[] = [
     { icon: '📱', title: 'Mobil Uygulamalar', desc: 'iOS ve Android için native ve cross-platform mobil uygulama geliştirme.' },
     { icon: '🌐', title: 'Web Uygulamaları', desc: 'Modern ve responsive web siteleri ve web uygulamaları geliştiriyoruz.' },
     { icon: '🖥️', title: 'Masaüstü Yazılımlar', desc: 'Windows, macOS ve Linux için masaüstü uygulamalar.' },

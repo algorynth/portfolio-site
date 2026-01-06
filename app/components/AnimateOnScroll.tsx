@@ -1,8 +1,14 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-export default function AnimateOnScroll({ children, className = '', animation = '' }) {
-    const ref = useRef(null);
+interface AnimateOnScrollProps {
+    children: React.ReactNode;
+    className?: string;
+    animation?: string;
+}
+
+export default function AnimateOnScroll({ children, className = '', animation = '' }: AnimateOnScrollProps) {
+    const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

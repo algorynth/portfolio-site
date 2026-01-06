@@ -3,11 +3,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
+interface NavLink {
+    href: string;
+    label: string;
+}
+
 export default function Navbar() {
     const pathname = usePathname();
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
-    const links = [
+    const links: NavLink[] = [
         { href: '/', label: 'Ana Sayfa' },
         { href: '/apps', label: 'Projeler' },
         { href: '/team', label: 'Ekip' },
