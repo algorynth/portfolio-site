@@ -33,13 +33,26 @@ export default function TeamPage() {
                         <div className="card team-card">
                             <img src="/bedir.jpg" alt="Bedir Tuğra Karaabalı" className="team-avatar" style={{ objectFit: 'cover' }} />
                             <h3 className="team-name">Bedir Tuğra Karaabalı</h3>
-                            <p className="team-role">Kurucu & Full Stack Yazılım Mühendisi</p>
+                            <p className="team-role">Full Stack Yazılım Mühendisi</p>
                             <p className="team-bio">
                                 Bilgisayar Mühendisi. Mobil, web ve masaüstü platformlarda kullanıcı deneyimini ön planda tutan, yenilikçi çözümler üreten bir yazılım geliştirici. Makine öğrenimi, ön uç geliştirme ve web teknolojileri konularında uzman.
                             </p>
                             <div className="team-social">
                                 <a href="https://github.com/bdrtr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🔗</a>
                                 <a href="https://www.linkedin.com/in/bdrtr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
+                            </div>
+                        </div>
+
+                        <div className="card team-card">
+                            <img src="/osman.jpg" alt="Osman Bayram" className="team-avatar" style={{ objectFit: 'cover' }} />
+                            <h3 className="team-name">Osman Bayram</h3>
+                            <p className="team-role">Data Scientist & ML Specialist</p>
+                            <p className="team-bio">
+                                Bahçeşehir Üniversitesi mezunu. N Kolay'da Dijital Ürün Yönetimi ve IT Koordinasyonunda çalışan, makine öğrenimi ve yapay zeka konularında uzman veri bilimci. Kaggle Notebooks Expert. Veri analizi ve modelleme alanında geniş tecrübeye sahip.
+                            </p>
+                            <div className="team-social">
+                                <a href="https://github.com/osbm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🔗</a>
+                                <a href="https://www.linkedin.com/in/osbm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
                             </div>
                         </div>
                     </div>
